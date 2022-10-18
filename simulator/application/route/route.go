@@ -70,7 +70,7 @@ func (route *Route) ExportJsonPositions() ([]string, error) {
 	var result []string
 	total := len(route.Positions)
 	for key, value := range route.Positions {
-		routeToJson.ClientID = route.ID
+		routeToJson.ID = route.ID
 		routeToJson.ClientID = route.ClientID
 		routeToJson.Position = []float64{value.Latitude, value.Longitude}
 		routeToJson.Finished = false
